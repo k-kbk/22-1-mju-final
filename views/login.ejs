@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/login.css">
+  <link rel="stylesheet" href="/header.css">
+  <title>bk</title>
+</head>
+
+<body>
+  <div class="wrap">
+    <%- include('./header')%>
+    <div class="container">
+      <h1>LOGIN</h1>
+      <div class="local_area">
+        <form action="/user/login" method="post" class="login_form" id="login_form" autocomplete="off">
+          <div class="input_area">
+            <div>
+              <input type="email" name="email" placeholder="이메일" class="input" required>
+            </div>
+            <div>
+              <input type="password" name="password" placeholder="비밀번호" class="input" required autocomplete="off">
+            </div>
+          </div>
+          <button type="submit" class="login_button">로그인하기</button>
+        </form>
+      </div>
+      <div class="others_area">
+        <button id="open_button" class="link">비밀번호 찾기</button>
+        <a href="/user/signup" class="link">회원가입</a>
+      </div>
+      <h5 class="or">
+        <p>or</p>
+      </h5>
+      <div class="kakao_area">
+        <form action="/user/login/kakao" method="get" id="kakao_form">
+          <button type="submit" class="kakao_button">카카오 로그인하기</button>
+        </form>
+      </div>
+      <div class="modal" id="modal">
+        <div class="modal_content">
+          <div class="close_area">
+            <button type="button" class="close_button" id="close_button"><img src="/x.png" alt="" class="close_img"></button>
+          </div>
+          <div class="find_area">
+            <h2>FIND PW</h2>
+            <form action="/user/find" method="get" class="find_form">
+              <input type="email" placeholder="이메일" class="input" name="email">
+              <button type="submit" class="find_button">비밀번호 찾기</button>
+            </form>
+          </div>
+        </div>
+        <div class="modal_layer">
+        </div>
+      </div>
+      <script>
+        document.getElementById("open_button").onclick = function () {
+          document.getElementById("modal").style.display = "block";
+        }
+        document.getElementById("close_button").onclick = function () {
+          document.getElementById("modal").style.display = "none";
+        }
+      </script>
+    </div>
+  </div>
+</body>
+
+</html>

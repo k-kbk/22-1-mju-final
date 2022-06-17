@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/edit.css">
+  <link rel="stylesheet" href="/header.css">
+  <script defer src="/edit.js"></script>
+  <title>bk</title>
+</head>
+
+<body>
+  <div class="wrap">
+    <%- include('./header')%>
+    <div class="container">
+      <h1>MY INFO</h1>
+      <div class="edit_area">
+        <form action="/user/edit?_method=PUT" method="post" class="edit_form" id="edit_form" autocomplete="off">
+          <div class="input_area">
+            <label for="name">이름</label>
+            <div>
+              <input type="text" name="name" id="name" placeholder="이름" class="input" value="<%= user.name %>" required>
+            </div>
+            <label for="emaiol">이메일</label>
+            <div>
+              <input type="email" name="email" id="email" class="input" value="<%= user.email %>" required>
+            </div>
+            <label for="password">비밀번호</label>
+            <div>
+              <input type="password" name="password" id="password" placeholder="비밀번호" class="input" autocomplete="off">
+            </div>
+            <label for="pw_check">비밀번호 확인</label>
+            <div>
+              <input type="password" name="pw_check" id="pw_check" placeholder="비밀번호 확인" class="input"
+                autocomplete="off">
+              <p id="check_text" class="check_text"></p>
+            </div>
+          </div>
+          <button type="submit" id="edit_button" class="edit_button">내 정보 수정하기</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

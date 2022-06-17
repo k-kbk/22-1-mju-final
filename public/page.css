@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Work+Sans:wght@500;600;700&display=swap');
+
+html,
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  background-color: white;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.wrap {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content_header {
+  width: 70%;
+  padding: 20px 0px 0px 0px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #D7E2EB;
+}
+
+.logo_area {
+  height: 80px;
+  width: 80px;
+  margin: 15px 30px 0px 0px;
+}
+
+.logo_area img {
+  height: 80px;
+  width: 80px;
+}
+
+.header_area {
+  width: 90%;
+}
+
+.header_area h1 {
+  margin: 30px 0px 15px;
+}
+
+.header_area h3 {
+  margin: 0px 0px 20px;
+  font-weight: 400;
+  color: #98A8B9;
+}
+
+.apply_area {
+  display: flex;
+  align-items: center;
+}
+
+.apply_area button {
+  height: 45px;
+  width: 110px;
+  margin-top: 25px;
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  background-color: #006577;
+  border: 1.5px solid #D7E2EB;
+  border-radius: 5px;
+}
+
+.content_body {
+  margin-top: 35px;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.sub_title {
+  width: 850px;
+  font-size: 21px;
+  font-weight: 500;
+  margin: 0px 0px 10px;
+  display: flex;
+}
+
+.info_area {
+  margin-bottom: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table_area table {
+  width: 850px;
+  padding: 10px 0px;
+  border-top: 1px solid #D7E2EB;
+  border-bottom: 1px solid #D7E2EB;
+}
+
+.info_row {
+  font-size: 18px;
+}
+
+.table_name {
+  padding-left: 15px;
+  width: 75px;
+}
+
+.homepage {
+  color: black;
+}
+
+.stack_area {
+  margin-bottom: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.stack_ul {
+  width: 850px;
+  border-top: 1px solid #D7E2EB;
+  border-bottom: 1px solid #D7E2EB;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  font-size: 17px;
+}
+
+.stack_ul li {
+  padding: 10px 15px 10px 0px;
+}
+
+.main_area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 35px;
+}
+
+.section {
+  margin-bottom: 35px;
+}
+
+.text {
+  width: 850px;
+  margin: 0px;
+  font-size: 17px;
+}
+
+.text_ul {
+  width: 850px;
+  padding: 0px;
+  margin: 0px;
+  font-size: 17px;
+  list-style: none;
+}

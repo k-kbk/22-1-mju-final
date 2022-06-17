@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/my.css">
+  <link rel="stylesheet" href="/header.css">
+  <title>bk</title>
+</head>
+
+<body>
+  <div class="wrap">
+    <%- include('./header')%>
+    <div class="container">
+      <div class="sub_title">
+        <img src="/profile.png" alt="" class="icon">
+        <div class="profile_div">
+          <h1>내 프로필</h1>
+          <div class="others_div">
+            <% if (user.provider == "local") { %>
+            <a href="/user/edit">내 정보 수정하기</a>
+            <% } %>
+            <form action="/user/delete?_method=DELETE" method="POST">
+              <button type="submit" class="withdraw_button">탈퇴하기</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="profile">
+        <h2><%= (user.name? user.name : "카카오 로그인 계정") %></h2>
+        <h3><%= (user.email? user.email : "-") %></h3>
+      </div>
+      <div class="sub_title">
+        <img src="/document.png" alt="" class="icon">
+        <h1>내가 지원한 채용 공고</h1>
+      </div>
+      <div class="applied_recruit">
+        <ul class="job_ul">
+          <% recruits.forEach((item) => { %>
+          <li class="job_li">
+            <a href="/recruit/<%= item.id %>">
+              <div class="item_header">
+                <img src="<%= item.Company.logo %>" alt="">
+              </div>
+              <div class="item_body">
+                <h4><%= item.title %></h4>
+                <h5><%= item.Company.name %></h5>
+                <div class="address">
+                  <img src="/place.png" alt="">
+                  <p><%= item.Company.address.split(' ')[0]%> <%= item.Company.address.split(' ')[1]%></p>
+                </div>
+              </div>
+            </a>
+          </li>
+          <% }); %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

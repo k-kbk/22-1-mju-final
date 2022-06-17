@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Work+Sans:wght@500;600;700&display=swap');
+
+html,
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  background-color: white;
+}
+
+.wrap {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sub_title {
+  width: 916px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.icon {
+  height: 25px;
+  width: 25px;
+  margin-top: 3px;
+}
+
+h1 {
+  margin: 10px 0px 10px 15px;
+  font-size: 25px;
+  font-weight: 500;
+  text-align: left;
+  align-items: center;
+}
+
+.profile {
+  height: 99px;
+  width: 886px;
+  margin: 0px 10px 44px 10px;
+  padding: 0px 15px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: 1px solid #D7E2EB;
+  border-radius: 5px;
+}
+
+.profile_div {
+  width: 886px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.others_div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile_div a {
+  font-size: 18px;
+  font-weight: 400;
+  color: black;
+}
+
+.withdraw_button {
+  height: 26px;
+  margin-top: 4px;
+  margin-left: 10px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  font-weight: 400;
+  color: black;
+  text-decoration: underline;
+}
+
+h2 {
+  margin: 15px 0px 5px 0px;
+  font-size: 23px;
+  font-weight: 500;
+}
+
+h3 {
+  margin: 5px 0px 15px 0px;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.job_ul {
+  width: 950px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  text-align: center;
+  margin: 0px 0px 0px 15px;
+  padding: 0px;
+}
+
+.job_li {
+  height: 120px;
+  width: 450px;
+  margin: 8px;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  border: 1px solid #D7E2EB;
+  border-radius: 5px;
+}
+
+.job_li:hover {
+  background-color: #d7e2eb3d;
+}
+
+.job_li a {
+  height: 130px;
+  width: 450px;
+  margin: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.item_header {
+  height: 70px;
+  width: 70px;
+}
+
+.item_header img {
+  height: 70px;
+  width: 70px;
+}
+
+.item_body {
+  width: 330px;
+  margin-left: 15px;
+  text-align: left;
+}
+
+.item_body h4 {
+  font-size: 19px;
+  font-weight: 500;
+  margin: 0px;
+  color: black;
+}
+
+.item_body h5 {
+  font-size: 15px;
+  font-weight: 400;
+  margin: 0px;
+  padding: 0px 0px 10px;
+  color: #98A8B9;
+}
+
+.address {
+  display: flex;
+  align-items: center;
+}
+
+.item_body img {
+  height: 15px;
+  width: 15px;
+  margin-top: 3px;
+  opacity: 0.7;
+}
+
+.item_body p {
+  font-size: 15px;
+  font-weight: 400;
+  padding: 0px 5px;
+  margin: 0px;
+  color: #98A8B9;
+}

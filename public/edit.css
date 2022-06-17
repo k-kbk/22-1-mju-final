@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Work+Sans:wght@500;600;700&display=swap');
+
+html,
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  background-color: white;
+}
+
+.wrap {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.container h1 {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 45px;
+  font-weight: 700;
+  margin-top: 30px;
+}
+
+.edit_area {
+  width: 325px;
+  margin-top: 30px;
+}
+
+label {
+  display: flex;
+  flex-direction: left;
+  margin-left: 5px;
+  font-size: 16px;
+}
+
+.input {
+  height: 23px;
+  width: 300px;
+  padding: 10px 10px;
+  margin: 5px 0 10px;
+  border: 1px solid #D7E2EB;
+  background-color: #FBFBFD;
+  border-radius: 5px;
+  font-size: 17px;
+  outline: none;
+}
+
+.input::placeholder {
+  opacity: 0.3;
+}
+
+.edit_button {
+  height: 40px;
+  width: 320px;
+  padding: 10px 15px;
+  margin: 10px 0;
+  border: 1px solid #005666;
+  border-radius: 5px;
+  font-size: 17px;
+  font-weight: 500;
+  color: white;
+  background-color: #005666;
+}
+
+.check_text {
+  height: 25px;
+  font-size: 15px;
+  opacity: 0.7;
+}
+
+.login_area {
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 15px;
+}
+
+.login_area p {
+  opacity: 0.5;
+}
+
+.login_link {
+  margin-left: 10px;
+  color: black;
+}

@@ -1,0 +1,14 @@
+<header class="header">
+  <nav class="nav">
+    <a href="/" class="logo">@WEB</a>
+    <ul class="nav_ul">
+      <% if (user) { %>
+      <li class="nav_li"><a href="/user/logout" class="nav_link">로그아웃</a></li>
+      <li class="nav_li"><a href="/user/my" class="nav_link">내 정보</a></li>
+      <% } else { %>
+      <li class="nav_li"><a href="/user/login" class="nav_link">로그인</a></li>
+      <li class="nav_li"><a href="/user/signup" class="nav_link">회원가입</a></li>
+      <% } %>
+    </ul>
+  </nav>
+</header>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/index.css">
+  <link rel="stylesheet" href="/header.css">
+  <title>bk</title>
+</head>
+
+<body>
+  <div class="wrap">
+    <%- include('./header')%>
+    <div class="container">
+      <div class="title">
+        <h1>RECRUITING NOW!</h1>
+      </div>
+      <div class="search">
+        <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png">
+        <form action="/recruit/search" method="get">
+          <input type="search" name="search" placeholder="검색어를 입력해 주세요" value="<%= keyword %>">
+        </form>
+      </div>
+      <div class="tag_area">
+        <ul class="tag_ul">
+          <% tags.forEach((item) => { %>
+          <li><a href="/recruit/tech/<%= item.tag %>"><button>#<%= item.tag %></button></a></li>
+          <% }); %>
+        </ul>
+      </div>
+      <div class="content">
+        <div class="job_count">
+          <p><%= recruits.length %>개의 채용 공고</p>
+        </div>
+        <ul class="job_ul">
+          <% recruits.forEach((item) => { %>
+          <li class="job_li">
+            <a href="/recruit/<%= item.id %>">
+              <div class="item_header">
+                <img src="<%= item.Company.logo %>" alt="">
+              </div>
+              <div class="item_body">
+                <h4><%= item.title %></h4>
+                <h5><%= item.Company.name %></h5>
+                <div class="address">
+                  <img src="/place.png" alt="">
+                  <p><%= item.Company.address.split(' ')[0]%> <%= item.Company.address.split(' ')[1]%></p>
+                </div>
+              </div>
+            </a>
+          </li>
+          <% }); %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

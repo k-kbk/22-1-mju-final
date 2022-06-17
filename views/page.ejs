@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/header.css">
+  <link rel="stylesheet" href="/page.css">
+  <title>bk</title>
+</head>
+
+<body>
+  <div class="wrap">
+    <%- include('./header') %>
+    <div class="container">
+      <div class="content_header">
+        <div class="logo_area">
+          <img src="<%= recruit.Company.logo %>" alt="">
+        </div>
+        <div class="header_area">
+          <h1><%= recruit.title %></h1>
+          <h3><%= recruit.Company.name %></h3>
+        </div>
+        <div class="apply_area">
+          <a href="/apply/<%= recruit.id %>"><button type="button">지원하기</button></a>
+          </form>
+        </div>
+      </div>
+      <div class="content_body">
+        <div class="info_area">
+          <div class="table_area">
+            <table>
+              <h4 class="sub_title">▪︎ 정보</h4>
+              <tbody>
+                <tr class="info_row">
+                  <td class="table_name">직무</td>
+                  <td>|ㅤ<%= recruit.career %></td>
+                </tr>
+                <tr class="info_row">
+                  <td class="table_name">고용 형태</td>
+                  <td>|ㅤ정규직</td>
+                </tr>
+                <tr class="info_row">
+                  <td class="table_name">근무 위치</td>
+                  <td>|ㅤ<%= recruit.Company.address %></td>
+                </tr>
+                <tr class="info_row">
+                  <td class="table_name">홈페이지</td>
+                  <td>|ㅤ<a href="<%= recruit.Company.homepage %>" class="homepage"><%= recruit.Company.homepage %></a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="stack_area">
+          <h4 class="sub_title">▪︎ 기술 스택</h4>
+          <ul class="stack_ul">
+            <% recruit.Techstacks.forEach((item) => { %>
+            <li>#<%= item.tag %></li>
+            <% }); %>
+          </ul>
+        </div>
+        <div class="main_area">
+          <div class="section">
+            <h4 class="sub_title">▪︎ 업무 소개</h4>
+            <div class="text_area">
+              <% recruit.content.split('\\n').forEach((item) => { %>
+              <p class="text"><%= item %></p>
+              <% }); %>
+            </div>
+          </div>
+          <div class="section">
+            <h4 class="sub_title">▪︎ 자격조건</h4>
+            <div class="text_area">
+              <ul class="text_ul">
+                <% recruit.requirement.split('\\n').forEach((item) => { %>
+                <li>- <%= item %></li>
+                <% }); %>
+              </ul>
+            </div>
+          </div>
+          <div class="section">
+            <h4 class="sub_title">▪︎ 우대사항</h4>
+            <div class="text_area">
+              <ul class="text_ul">
+                <% recruit.plus.split('\\n').forEach((item) => { %>
+                <li>- <%= item %></li>
+                <% }); %>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
